@@ -3,7 +3,7 @@ import React from 'react';
 class BaseAnimatingDemoComponent extends React.Component {
 
     constructor() {
-
+        super();
         this._animate = this._animate.bind(this);
         this._requestAnimation = this._requestAnimation.bind(this);
         this._cancelAnimation = this._cancelAnimation.bind(this);

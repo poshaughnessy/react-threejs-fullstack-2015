@@ -6,6 +6,8 @@ class SkinnedComponent extends React.Component {
 
     constructor() {
 
+        super();
+
         this.displayName = 'Skinned';
 
         let loader = new THREE.JSONLoader();

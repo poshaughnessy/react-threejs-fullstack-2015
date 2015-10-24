@@ -6,6 +6,8 @@ class RobotComponent extends React.Component {
 
     constructor() {
 
+        super();
+
         this.displayName = 'Robot';
 
         let loader = new THREE.JSONLoader();

@@ -3,6 +3,7 @@ import React from 'react';
 class BaseSlideComponent extends React.Component {
 
     constructor() {
+        super();
         this._isVisible = this._isVisible.bind(this);
     }
 

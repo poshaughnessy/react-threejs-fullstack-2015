@@ -6,6 +6,8 @@ class MonsterComponent extends React.Component {
 
     constructor() {
 
+        super();
+
         this.displayName = 'Monster';
 
         let loader = new THREE.JSONLoader();
