@@ -1,51 +1,17 @@
-/**
- * NB. The gulpfile isn't ES6 yet - looks like we need to wait for Gulp v0.4:
- * https://github.com/gulpjs/gulp/issues/830
- */
-
-// Enable ES6 - this will make it automatically transpile required files. See: http://babeljs.io/docs/usage/require/
-require('babel/register');
-
-// TEMP fix for this issue: https://github.com/babel/babel/issues/489
-Object.getPrototypeOf.toString = function() {return Object.toString();};
-
 var _ = require('lodash'),
     gulp = require('gulp'),
-    //babel = require('gulp-babel'),
     buffer = require('vinyl-buffer'),
     concat = require('gulp-concat'),
     gutil = require('gulp-util'),
-    //rename = require('gulp-rename'),
     sass = require('gulp-sass'),
     source = require('vinyl-source-stream'),
     sourcemaps = require('gulp-sourcemaps'),
     babelify = require('babelify'),
     browserify = require('browserify'),
-    browserifyShim = require('browserify-shim'),
     watchify = require('watchify'),
     fs = require('fs'),
     server = require('./server');
 
-/**
- *  Transpile and concatenate the JavaScripts into dist/bundle.js
- */
-/*
-gulp.task('babel', function() {
-
-    return browserify('./src/main.js', {
-            debug: true  // Set to false for production!
-        })
-        //.transform('browserify-shim')
-        .transform(babelify.configure({
-            extensions: ['.js']//,
-            //ignore: 'bower_components'
-        }))
-        .bundle()
-        .on('error', function (err) { console.log('Babelify error : ' + err.message); })
-        .pipe(fs.createWriteStream('./dist/bundle.js'));
-
-});
-*/
 
 /**
  * Thanks rootical. Based on: https://gist.github.com/rootical/d700ea0d89bbfc362fc5
