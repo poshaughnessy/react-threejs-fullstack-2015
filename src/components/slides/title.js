@@ -7,10 +7,10 @@ class SlideContents extends React.Component {
     render() {
 
         return (
-            <div className="contents">
+            <div className="contents title">
                 <h1>React &amp; Three.js</h1>
                 <h2>React All The Things!</h2>
-                <img src="/images/X-All-The-Y.jpg" alt="All the things"/>
+                <img src="/images/X-All-The-Y.png" alt="All the things"/>
                 <p>Peter O'Shaughnessy</p>
             </div>
         );

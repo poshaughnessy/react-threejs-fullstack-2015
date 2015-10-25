@@ -3,11 +3,33 @@ html {
 }
 
 body {
-  font-family: Tahoma, Geneva, sans-serif;
-  font-size: 25px;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 20px; /* By default presume 800x600 */
   margin: 0;
   padding: 0;
   height: 100%;
+  color: #fff;
+
+  @media (min-width: 1024px) {
+    font-size: 26px;
+  }
+
+  @media (min-width: 1280px) {
+    font-size: 32px;
+  }
+
+  @media (min-width: 1366px) {
+    font-size: 34px;
+  }
+
+  @media (min-width: 1600px) {
+    font-size: 40px;
+  }
+
+  @media (min-width: 1920px) {
+    font-size: 48px;
+  }
+
 }
 
 #app {
@@ -23,8 +45,8 @@ body {
 }
 
 h1 {
-  margin-top: 10px;
   font-size: 2.5em;
+  margin: 0;
 }
 
 h2 {
@@ -35,12 +57,28 @@ p {
   font-size: 1.3em;
 }
 
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+pre {
+  display: inline-block;
+  text-align: left;
+  margin: 0 auto;
+}
+
+
 .slide {
 
   position: absolute;
   width: 100%;
   height: 100%;
   text-align: center;
+  background-color: #3a5273;
+  background-image: url('/images/background.png');
+  background-size: 100% 100%;
 
   &.hide {
     display: none;
@@ -63,15 +101,9 @@ p {
 
 }
 
-canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
+/* Slide specific */
 
-pre {
-  display: inline-block;
-  text-align: left;
-  margin: 0 auto;
+.title h2 {
+  font-style: italic;
+  margin-top: 0.5em;
 }
-
