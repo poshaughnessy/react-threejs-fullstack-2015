@@ -54,7 +54,14 @@ h2 {
 }
 
 p {
-  font-size: 1.3em;
+  font-size: 1.1em;
+}
+
+a,
+a:visited,
+a:link {
+  color: #ccc;
+  text-decoration: none;
 }
 
 canvas {
@@ -69,6 +76,9 @@ pre {
   margin: 0 auto;
 }
 
+.caption {
+  font-size: 0.8em;
+}
 
 .slide {
 
