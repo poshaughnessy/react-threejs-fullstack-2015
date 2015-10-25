@@ -12,16 +12,11 @@ app.use( '/node_modules/three/', express.static('node_modules/three/') );
 app.use( '/dist', express.static('dist') );
 app.use( '/images', express.static('images') );
 app.use( '/models', express.static('models') );
+app.use( '/videos', express.static('videos') );
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
-
-// TEMP
-app.get('/test', (req, res) => {
-    res.sendFile(path.join(__dirname, 'test.html'));
-});
-
 
 app.use((req, res) => {
     res.status(404).send('Page not found');

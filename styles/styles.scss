@@ -118,14 +118,20 @@ pre {
     }
 
     p {
-      margin: 0.2em 0 0 0;
+      margin: 0.2em 0 0.5em 0;
       font-size: 1em;
-
-      .twitter {
-        font-size: 0.9em;
-      }
     }
 
+    .logo {
+      height: 1em;
+    }
+
+  }
+
+  .apoc {
+    video {
+      max-width: 90%;
+    }
   }
 
   .demo {
