@@ -1,6 +1,6 @@
 import React from 'react';
 
-let composeSlide = (ChildComponent) => {
+let composeSlide = (ChildComponent, backgroundColour) => {
 
     class Slide extends React.Component {
 
@@ -19,8 +19,15 @@ let composeSlide = (ChildComponent) => {
         }
 
         render() {
+
+            let style = {};
+
+            if( backgroundColour ) {
+                style.backgroundColor = backgroundColour;
+            }
+
             return (
-                <div className={this._getSlideClassName()} style={this.props.style}>
+                <div className={this._getSlideClassName()} style={style}>
                     <ChildComponent/>
                 </div>
             );

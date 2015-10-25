@@ -1,5 +1,6 @@
 import React from 'react';
 import composeSlide from '../compose-slide';
+import * as Constants from '../../constants';
 
 class SlideContents extends React.Component {
 
@@ -18,4 +19,4 @@ class SlideContents extends React.Component {
 
 }
 
-export default composeSlide(SlideContents);
+export default composeSlide(SlideContents, Constants.PEBBLE_CODE_PINK);
