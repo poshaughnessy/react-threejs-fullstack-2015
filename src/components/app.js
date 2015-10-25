@@ -5,7 +5,8 @@ const SLIDES = [
     slides.Title,
     slides.ApocIntro,
     slides.DontDoThis1,
-    slides.ReactThreeIntro
+    slides.ReactThreeIntro,
+    slides.RobotDemo
 ];
 
 class AppComponent extends React.Component {

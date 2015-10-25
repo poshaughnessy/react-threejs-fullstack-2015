@@ -104,29 +104,85 @@ pre {
     }
   }
 
-}
+  /* Slide specific */
 
-/* Slide specific */
+  .title {
 
-.title {
-
-  h2 {
-    font-style: italic;
-    margin-top: 0.5em;
-  }
-
-  img {
-    margin-bottom: 0.5em;
-  }
-
-  p {
-    margin: 0.2em 0 0 0;
-    font-size: 1em;
-
-    .twitter {
-      font-size: 0.9em;
+    h2 {
+      font-style: italic;
+      margin-top: 0.5em;
     }
+
+    img {
+      margin-bottom: 0.5em;
+    }
+
+    p {
+      margin: 0.2em 0 0 0;
+      font-size: 1em;
+
+      .twitter {
+        font-size: 0.9em;
+      }
+    }
+
   }
 
+  .demo {
+
+    height: 100%;
+
+    header {
+
+      font-size: 0.7em;
+      position: relative;
+      padding: 5px;
+      background: #333;
+      color: #eee;
+      z-index: 1;
+
+      .group-label {
+        float: left;
+        margin-right: 5px;
+      }
+
+      .radio-group {
+        float: left;
+        margin-right: 30px;
+
+        input {
+          position: relative;
+          top: -3px;
+        }
+
+        label {
+          margin-right: 10px;
+        }
+
+      }
+
+      input[type="range"] {
+        float: left;
+      }
+
+      &:after {
+        /* Clear fix */
+        content: '';
+        display: table;
+        clear: both;
+      }
+
+    }
+
+    .credits {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      font-size: 0.7em;
+      padding: 10px;
+      color: #666;
+    }
+
+  }
 
 }

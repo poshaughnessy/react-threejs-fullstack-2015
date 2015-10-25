@@ -20,4 +20,4 @@ class SlideContents extends React.Component {
 
 }
 
-export default composeSlide(SlideContents, Constants.PEBBLE_CODE_PINK);
+export default composeSlide(SlideContents, Constants.COLOURS.PEBBLE_CODE_PINK);

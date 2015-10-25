@@ -81,7 +81,7 @@ gulp.task('sass', function() {
 
     return gulp.src('./styles/*.scss')
         .pipe(sourcemaps.init())
-        .pipe(sass({outputStyle: 'compressed'}))
+        .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
         .pipe(sourcemaps.write())
         .pipe(concat('styles.css'))
         .pipe(gulp.dest('./dist'));
