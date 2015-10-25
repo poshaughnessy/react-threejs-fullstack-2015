@@ -1,19 +1,19 @@
 import React from 'react';
-import BaseSlideComponent from '../base-slide';
+import composeSlide from '../compose-slide';
 
-export default class SlideComponent extends BaseSlideComponent {
+class SlideContents extends React.Component {
 
     render() {
 
         return (
-            <div className={this._getSlideClassName()}>
-                <div className="contents">
-                    <h2>react-three</h2>
-                    <p><a href="https://github.com/Izzimach/react-three">github.com/Izzimach/react-three</a></p>
-                </div>
+            <div className="contents">
+                <h2>react-three</h2>
+                <p><a href="https://github.com/Izzimach/react-three">github.com/Izzimach/react-three</a></p>
             </div>
         );
 
     }
 
 }
+
+export default composeSlide(SlideContents);

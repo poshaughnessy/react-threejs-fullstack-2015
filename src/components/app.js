@@ -5,10 +5,7 @@ const SLIDES = [
     slides.Title,
     slides.ApocIntro,
     slides.DontDoThis1,
-    slides.ReactThreeIntro,
-    slides.Robot,
-    slides.Monster,
-    slides.Skinned
+    slides.ReactThreeIntro
 ];
 
 class AppComponent extends React.Component {
@@ -40,7 +37,7 @@ class AppComponent extends React.Component {
         let slideElements = [];
 
         SLIDES.forEach((slide, index) => {
-            slideElements.push( React.createElement(slide, {slideNum: index+1, currentSlideNum: this.state.currentSlideNum}) );
+            slideElements.push( React.createElement(slide, {key: index, slideNum: index+1, currentSlideNum: this.state.currentSlideNum}) );
         });
 
         return (

@@ -1,26 +1,26 @@
 import React from 'react';
-import BaseSlideComponent from '../base-slide';
+import composeSlide from '../compose-slide';
 
-export default class SlideComponent extends BaseSlideComponent {
+class SlideContents extends React.Component {
 
     render() {
 
         return (
-            <div className={this._getSlideClassName()}>
-                <div className="contents">
-                    <h2>First Method</h2>
-                    <pre>
-                        <code>
+            <div className="contents">
+                <h2>First Method</h2>
+                <pre>
+                    <code>
                         {'componentDidMount: function() {\n' +
                         '  ...\n' +
                         '  Scene.init(this);\n' +
                         '}'}
-                        </code>
-                    </pre>
-                </div>
+                    </code>
+                </pre>
             </div>
         );
 
     }
 
 }
+
+export default composeSlide(SlideContents);
