@@ -1,5 +1,5 @@
 import React from 'react';
-import BaseSlideComponent from './base-slide';
+import BaseSlideComponent from '../base-slide';
 import SkinnedDemo from '../demos/skinned/demo';
 
 export default class SlideComponent extends BaseSlideComponent {

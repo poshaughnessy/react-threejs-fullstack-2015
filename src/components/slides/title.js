@@ -1,5 +1,5 @@
 import React from 'react';
-import BaseSlideComponent from './base-slide';
+import BaseSlideComponent from '../base-slide';
 
 export default class SlideComponent extends BaseSlideComponent {
 
@@ -8,8 +8,9 @@ export default class SlideComponent extends BaseSlideComponent {
         return (
             <div className={this._getSlideClassName()}>
                 <div className="contents">
-                    <h1>Combining React &amp; Three.js</h1>
-                    <h2>for 2D + 3D Web Apps</h2>
+                    <h1>React &amp; Three.js</h1>
+                    <h2>React All The Things!</h2>
+                    <img src="/images/X-All-The-Y.jpg" alt="All the things"/>
                     <p>Peter O'Shaughnessy</p>
                 </div>
             </div>

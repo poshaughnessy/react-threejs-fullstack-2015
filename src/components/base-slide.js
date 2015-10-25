@@ -19,7 +19,8 @@ class BaseSlideComponent extends React.Component {
 
 BaseSlideComponent.propTypes = {
     currentSlideNum: React.PropTypes.number,
-    slideNum: React.PropTypes.number
+    slideNum: React.PropTypes.number,
+    backgroundColour: React.PropTypes.string
 };
 
 export default BaseSlideComponent;

@@ -1,20 +1,14 @@
 import React from 'react';
-import SlideTitle from './slides/title';
-import SlideApocIntro from './slides/apoc-intro';
-import SlideDontDoThis1 from './slides/dont-do-this-1';
-import SlideReactThreeIntro from './slides/react-three-intro';
-import SlideRobot from './slides/robot';
-import SlideMonster from './slides/monster';
-import SlideSkinned from './slides/skinned';
+import * as slides from './slides/index';
 
 const SLIDES = [
-    SlideTitle,
-    SlideApocIntro,
-    SlideDontDoThis1,
-    SlideReactThreeIntro,
-    SlideRobot,
-    SlideMonster,
-    SlideSkinned
+    slides.Title,
+    slides.ApocIntro,
+    slides.DontDoThis1,
+    slides.ReactThreeIntro,
+    slides.Robot,
+    slides.Monster,
+    slides.Skinned
 ];
 
 class AppComponent extends React.Component {
@@ -74,9 +68,7 @@ class AppComponent extends React.Component {
         console.log('Left');
 
         if( this.state.currentSlideNum > 1 ) {
-
             this.setState({currentSlideNum: this.state.currentSlideNum - 1});
-
         }
 
         console.log('this.state.currentSlideNum', this.state.currentSlideNum);
@@ -87,9 +79,7 @@ class AppComponent extends React.Component {
         console.log('Right');
 
         if( this.state.currentSlideNum < SLIDES.length ) {
-
             this.setState({currentSlideNum: this.state.currentSlideNum + 1});
-
         }
 
         console.log('this.state.currentSlideNum', this.state.currentSlideNum);

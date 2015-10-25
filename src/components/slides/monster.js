@@ -1,5 +1,5 @@
 import React from 'react';
-import BaseSlideComponent from './base-slide';
+import BaseSlideComponent from '../base-slide';
 import MonsterDemo from '../demos/monster/demo';
 
 export default class SlideComponent extends BaseSlideComponent {
