@@ -1,10 +1,10 @@
 import React from 'react';
 import THREE from 'three';
 import ReactTHREE from 'react-three';
-import ControlsComponent from '../demos/robots/controls';
-import SceneComponent from '../demos/robots/scene';
-import Constants from '../../constants';
-import composeSlide from '../compose-slide';
+import ControlsComponent from '../../demos/robots/controls';
+import SceneComponent from '../../demos/robots/scene';
+import Constants from '../../../constants';
+import composeSlide from '../../compose-slide';
 
 class SlideContents extends React.Component {
 

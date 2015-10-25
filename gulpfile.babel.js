@@ -9,41 +9,33 @@ var _ = require('lodash'),
     babelify = require('babelify'),
     browserify = require('browserify'),
     watchify = require('watchify'),
+    notify = require('gulp-notify'),
     fs = require('fs'),
     server = require('./server');
 
 
 /**
- * Thanks rootical. Based on: https://gist.github.com/rootical/d700ea0d89bbfc362fc5
+ * Based on: https://gist.github.com/wesbos/52b8fe7e972356e85b43
  */
-function browserifyBuild(watch) {
+function handleBuildErrors() {
+    var args = Array.prototype.slice.call(arguments);
+    notify.onError({
+        title: 'Build Error',
+        message: '<%= error.message %>'
+    }).apply(this, args);
+    this.emit('end'); // Keep gulp from hanging on this task
+}
 
-    var bundler;
+/**
+ * Based on: https://gist.github.com/wesbos/52b8fe7e972356e85b43
+ */
+function browserifyBuild(file, watch) {
 
-    if( watch ) {
+    // watchify() if watch requested, otherwise run browserify() once
+    var bundler = watch ? watchify(browserify(file).ignore('three')) :
+        browserify(file).ignore('three');
 
-        bundler = watchify(browserify('./src/main.js',
-            _.assign(watchify.args, {
-                debug: true
-            })).ignore('three')); // This means THREE.js won't be included in the bundle - we're pulling in via separate script tag
-
-        bundler.on('update', function() {
-            bundle();
-        });
-
-    } else {
-
-        bundler = browserify('./src/main.js', {
-            debug: true
-        }).ignore('three'); // This means THREE.js won't be included in the bundle - we're pulling in via separate script tag
-
-    }
-
-    bundler.on('error', function(error) {
-        gutil.log('Browserify error', error);
-    });
-
-    function bundle() {
+    function rebundle() {
 
         gutil.log('Bundle...');
 
@@ -56,28 +48,37 @@ function browserifyBuild(watch) {
             // Apply Browserify Shim to allow us to use globals like THREE. Global means it will apply to our dependencies too (e.g. react-three)
             .transform({global: true}, 'browserify-shim')
             .bundle()
+            .on('error', handleBuildErrors)
             .pipe(source('bundle.js'))
             .pipe(buffer())
             .pipe(sourcemaps.init({
                 loadMaps: true
             }))
-            .pipe(sourcemaps.write())
-            .pipe(gulp.dest('dist'));
+            .pipe(gulp.dest('./dist/'))
+            .on('end', function () {
 
-        hrTime = process.hrtime();
-        var t2 = hrTime[0] * 1000 + hrTime[1] / 1000000;
+                hrTime = process.hrtime();
+                var t2 = hrTime[0] * 1000 + hrTime[1] / 1000000;
 
-        gutil.log('Bundle took ' + Math.round(t2-t1) + ' ms');
+                gutil.log('Bundle took ' + Math.round(t2 - t1) + ' ms');
+            });
 
     }
 
-    return bundle();
+    // Listen for an update and run rebundle
+    bundler.on('update', function () {
+        rebundle();
+        gutil.log('Rebundle...');
+    });
+
+    // Run it once the first time this is called
+    return rebundle();
 }
 
 /**
  *  Compile and concatenate the SCSS files into dist/styles.css
  */
-gulp.task('sass', function() {
+gulp.task('compile:sass', function() {
 
     return gulp.src('./styles/*.scss')
         .pipe(sourcemaps.init())
@@ -88,39 +89,45 @@ gulp.task('sass', function() {
 
 });
 
-gulp.task('browserify', function() {
-    return browserifyBuild(false);
-});
-
-/**
- * Browserify watch
- */
-gulp.task('browserify-watch', function() {
-    return browserifyBuild(true);
+gulp.task('compile:js', function() {
+    return browserifyBuild('./src/main.js', false);
 });
 
 /**
  * Compile JS and SCSS
  */
-gulp.task('compile', ['browserify', 'sass'], function() {
+gulp.task('compile', ['compile:js', 'sass'], function() {
 });
 
 /**
- * Compile and watch for changes
+ * Sass watch (not to be confused with a sasquatch)
  */
-gulp.task('watch', ['compile','browserify-watch'], function() {
-    gulp.watch('./styles/*.scss', ['sass']);
+gulp.task('watch:sass', function() {
+    return gulp.watch('./styles/*.scss', ['compile:sass']);
 });
 
 /**
- * Compile and start watching, then start the server
+ * JS watch
  */
-gulp.task('serve', ['watch'], function() {
+gulp.task('watch:js', function() {
+    return browserifyBuild('./src/main.js', true);
+});
+
+/**
+ * Watch for Sass/JS changes
+ */
+gulp.task('watch', ['watch:sass', 'watch:js'], function() {
+});
+
+/**
+ * Compile Sass and start watching (this includes JS build), then start the server
+ */
+gulp.task('serve', ['compile:sass', 'watch'], function() {
     server.start();
 });
 
 /**
- * By default, runs the compile task
+ * By default, just runs the compile task
  */
 gulp.task('default', ['compile'], function() {
 });

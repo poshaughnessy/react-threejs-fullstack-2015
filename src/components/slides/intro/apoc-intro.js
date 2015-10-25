@@ -1,5 +1,5 @@
 import React from 'react';
-import composeSlide from '../compose-slide';
+import composeSlide from '../../compose-slide';
 
 class SlideContents extends React.Component {
 
@@ -7,7 +7,7 @@ class SlideContents extends React.Component {
 
         return (
             <div className="contents apoc">
-                <h2>2D + 3D Web Apps</h2>
+                <h2>How would you develop this?</h2>
                 <video src="/videos/apoc-demo.mp4" poster="/images/project-apoc-screengrab.png" controls/>
                 <p className="caption"><a href="http://labs.pearson.com/prototypes/apoc/">labs.pearson.com/prototypes/apoc/</a></p>
             </div>

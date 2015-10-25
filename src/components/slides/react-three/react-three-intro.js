@@ -1,5 +1,5 @@
 import React from 'react';
-import composeSlide from '../compose-slide';
+import composeSlide from '../../compose-slide';
 
 class SlideContents extends React.Component {
 
