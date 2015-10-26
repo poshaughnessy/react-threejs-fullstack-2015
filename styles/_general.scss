@@ -9,6 +9,7 @@ body {
   padding: 0;
   height: 100%;
   color: #fff;
+  text-rendering: optimizeLegibility;
 
   @media (min-width: 1024px) and (min-height: 768px) {
     font-size: 26px;
