@@ -3,7 +3,9 @@ import * as slides from './slides/index';
 
 const SLIDES = [
     slides.Title,
+    slides.ThreeDimensions,
     slides.ApocIntro,
+    slides.ChangeMoneyExample,
     slides.DontDoThis1,
     slides.ReactThreeIntro,
     slides.ReactThreeExample1,
@@ -18,13 +20,35 @@ class AppComponent extends React.Component {
         super(props);
 
         this.state = {
-            currentSlideNum: props.initialSlideNum
+            currentSlideNum: props.initialSlideNum || 1
         };
 
         this._onKeyUp = this._onKeyUp.bind(this);
         this._onLeft = this._onLeft.bind(this);
         this._onRight = this._onRight.bind(this);
 
+    }
+
+    componentWillMount() {
+        var hashTokens = window.location.hash.replace(/^#\/?|\/$/g, '').split('/');
+        if( hashTokens.length > 0 ) {
+            let firstToken = hashTokens[0];
+            if( firstToken ) {
+
+                try {
+                    let slideNum = parseInt(firstToken);
+
+                    if( slideNum > 0 ) {
+                        console.log('Set page number from hash', slideNum);
+                        this.setState({currentSlideNum: slideNum});
+                    }
+                } catch(err) {
+                    console.error('Unable to parse hash token', firstToken, err);
+                }
+
+
+            }
+        }
     }
 
     componentDidMount() {
@@ -36,6 +60,8 @@ class AppComponent extends React.Component {
     }
 
     render() {
+
+        window.location.hash = this.state.currentSlideNum;
 
         let slideElements = [];
 
