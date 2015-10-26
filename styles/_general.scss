@@ -83,6 +83,21 @@ pre {
 
 .caption {
   font-size: 0.8em;
+
+  &.small {
+    font-size: 0.7em;
+  }
+}
+
+ul {
+  display: inline-block;
+  padding: 0;
+  font-size: 1.8em;
+
+  li {
+    text-align: left;
+    margin-bottom: 0.5em;
+  }
 }
 
 .slide {

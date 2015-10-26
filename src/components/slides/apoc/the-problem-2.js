@@ -7,7 +7,7 @@ class SlideContents extends React.Component {
 
         return (
             <div className="contents the-problem">
-                <h2>The Problem</h2>
+                <h3>Let's Go From This...</h3>
                 <img src="/images/Active_Margin.svg" alt="Active margin plate tectonics diagram"/>
                 <p className="caption small"><a href="https://commons.wikimedia.org/wiki/File:Active_Margin.svg">Booyabazooka, Wikimedia</a></p>
             </div>
