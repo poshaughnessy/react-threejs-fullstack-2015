@@ -8,6 +8,7 @@ const SLIDES = [
     slides.BodyLabsExample,
     slides.WebGLSupport1,
     slides.WebGLSupport2,
+    slides.TheProblem,
     slides.ApocIntro,
     slides.DontDoThis1,
     slides.ReactThreeIntro,

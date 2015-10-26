@@ -4,6 +4,7 @@ export { default as ChangeMoneyExample } from './intro/example-change-money';
 export { default as BodyLabsExample } from './intro/example-shapex';
 export { default as WebGLSupport1 } from './intro/webgl-support-1';
 export { default as WebGLSupport2 } from './intro/webgl-support-2';
+export { default as TheProblem } from './intro/the-problem';
 export { default as ApocIntro } from './intro/apoc-intro';
 export { default as DontDoThis1 } from './react-three/dont-do-this-1';
 export { default as ReactThreeIntro } from './react-three/react-three-intro';
