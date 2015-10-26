@@ -32,7 +32,7 @@ function handleBuildErrors() {
 function browserifyBuild(file, watch) {
 
     // watchify() if watch requested, otherwise run browserify() once
-    var bundler = watch ? watchify(browserify(file).ignore('three')) :
+    var bundler = watch ? watchify(browserify(file).ignore('three'), {ignoreWatch: '**/node_modules/**'}) :
         browserify(file).ignore('three');
 
     function rebundle() {
@@ -42,7 +42,7 @@ function browserifyBuild(file, watch) {
         var hrTime = process.hrtime();
         var t1 = hrTime[0] * 1000 + hrTime[1] / 1000000;
 
-        bundler
+        return bundler
             // Apply Babelify transform to transpile from ES6 to ES5 - TODO set compact to true for production build?
             .transform(babelify.configure({compact: false}))
             // Apply Browserify Shim to allow us to use globals like THREE. Global means it will apply to our dependencies too (e.g. react-three)
