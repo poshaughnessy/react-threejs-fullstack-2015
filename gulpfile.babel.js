@@ -29,26 +29,29 @@ function handleBuildErrors() {
 /**
  * Based on: https://gist.github.com/wesbos/52b8fe7e972356e85b43
  */
-function browserifyBuild(file, watch) {
+function browserifyBuild(file, watch, cb) {
 
     // watchify() if watch requested, otherwise run browserify() once
     var bundler = watch ? watchify(browserify(file).ignore('three'), {ignoreWatch: '**/node_modules/**'}) :
         browserify(file).ignore('three');
 
-    function rebundle() {
+    bundler
+        .on('log', gutil.log)
+        .on('error', handleBuildErrors)
+        // Apply Babelify transform to transpile from ES6 to ES5 - TODO set compact to true for production build?
+        .transform(babelify.configure({compact: false}))
+        // Apply Browserify Shim to allow us to use globals like THREE. Global means it will apply to our dependencies too (e.g. react-three)
+        .transform({global: true}, 'browserify-shim');
+
+    function bundle(cb) {
 
         gutil.log('Bundle...');
 
         var hrTime = process.hrtime();
         var t1 = hrTime[0] * 1000 + hrTime[1] / 1000000;
 
-        return bundler
-            // Apply Babelify transform to transpile from ES6 to ES5 - TODO set compact to true for production build?
-            .transform(babelify.configure({compact: false}))
-            // Apply Browserify Shim to allow us to use globals like THREE. Global means it will apply to our dependencies too (e.g. react-three)
-            .transform({global: true}, 'browserify-shim')
+        bundler
             .bundle()
-            .on('error', handleBuildErrors)
             .pipe(source('bundle.js'))
             .pipe(buffer())
             .pipe(sourcemaps.init({
@@ -61,18 +64,21 @@ function browserifyBuild(file, watch) {
                 var t2 = hrTime[0] * 1000 + hrTime[1] / 1000000;
 
                 gutil.log('Bundle took ' + Math.round(t2 - t1) + ' ms');
+
+                if( typeof cb === 'function') {
+                    cb();
+                }
             });
 
     }
 
     // Listen for an update and run rebundle
     bundler.on('update', function () {
-        rebundle();
-        gutil.log('Rebundle...');
+        bundle();
     });
 
     // Run it once the first time this is called
-    return rebundle();
+    return bundle(cb);
 }
 
 /**
@@ -89,8 +95,8 @@ gulp.task('compile:sass', function() {
 
 });
 
-gulp.task('compile:js', function() {
-    return browserifyBuild('./src/main.js', false);
+gulp.task('compile:js', function(cb) {
+    return browserifyBuild('./src/main.js', false, cb);
 });
 
 /**
@@ -109,8 +115,8 @@ gulp.task('watch:sass', function() {
 /**
  * JS watch
  */
-gulp.task('watch:js', function() {
-    return browserifyBuild('./src/main.js', true);
+gulp.task('watch:js', function(cb) {
+    return browserifyBuild('./src/main.js', true, cb);
 });
 
 /**
