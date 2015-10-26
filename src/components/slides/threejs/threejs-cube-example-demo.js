@@ -64,12 +64,12 @@ class SlideContents extends React.Component {
         this.renderer.render(this.scene, this.camera);
 
         // Call animate again once browser's ready for next frame
-        this.rafId = requestAnimationFrame( this._animate )
+        this._rafId = requestAnimationFrame( this._animate )
     }
 
     _destroyScene() {
 
-        if( this.rafId ) {
+        if( this._rafId ) {
             cancelAnimationFrame(this.rafId);
         }
 

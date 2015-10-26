@@ -29,6 +29,14 @@ class SceneComponent extends React.Component {
 
     }
 
+    componentWillUnmount() {
+
+        // Stop animation
+        if( this._rafId ) {
+            cancelAnimationFrame(this._rafId);
+        }
+    }
+
     render() {
 
         let x = this.state.modelPosition.x,
@@ -117,7 +125,7 @@ class SceneComponent extends React.Component {
         this.setState({modelRotation: this.state.modelRotation +
         (this.props.spinDirection === Constants.SPIN.LEFT ? spinAmount : -spinAmount)});
 
-        requestAnimationFrame(this._animate);
+        this._rafId = requestAnimationFrame(this._animate);
 
     }
 
