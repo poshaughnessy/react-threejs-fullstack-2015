@@ -38,7 +38,6 @@ function browserifyBuild(file, watch, cb) {
 
     bundler
         .on('log', gutil.log)
-        .on('error', handleBuildErrors)
         // Apply Babelify transform to transpile from ES6 to ES5 - TODO set compact to true for production build?
         .transform(babelify.configure({compact: false}))
         // Apply Browserify Shim to allow us to use globals like THREE. Global means it will apply to our dependencies too (e.g. react-three)
@@ -53,6 +52,7 @@ function browserifyBuild(file, watch, cb) {
 
         bundler
             .bundle()
+            .on('error', handleBuildErrors)
             .pipe(source('bundle.js'))
             .pipe(buffer())
             .pipe(sourcemaps.init({
