@@ -80,7 +80,7 @@ function browserifyBuild(file, watch) {
  */
 gulp.task('compile:sass', function() {
 
-    return gulp.src('./styles/*.scss')
+    return gulp.src('./styles/**/*.scss')
         .pipe(sourcemaps.init())
         .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
         .pipe(sourcemaps.write())
@@ -103,7 +103,7 @@ gulp.task('compile', ['compile:js', 'sass'], function() {
  * Sass watch (not to be confused with a sasquatch)
  */
 gulp.task('watch:sass', function() {
-    return gulp.watch('./styles/*.scss', ['compile:sass']);
+    return gulp.watch('./styles/**/*.scss', ['compile:sass']);
 });
 
 /**

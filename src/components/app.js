@@ -6,6 +6,7 @@ const SLIDES = [
     slides.ApocIntro,
     slides.DontDoThis1,
     slides.ReactThreeIntro,
+    slides.ReactThreeExample1,
     slides.RobotDemo,
     slides.Thanks
 ];
@@ -50,8 +51,6 @@ class AppComponent extends React.Component {
 
     _onKeyUp(e) {
 
-        console.log('onKeyUp', e);
-
         switch( e.keyCode ) {
             case 37: // left arrow
                 this._onLeft();
@@ -64,24 +63,18 @@ class AppComponent extends React.Component {
 
     _onLeft() {
 
-        console.log('Left');
-
         if( this.state.currentSlideNum > 1 ) {
             this.setState({currentSlideNum: this.state.currentSlideNum - 1});
         }
 
-        console.log('this.state.currentSlideNum', this.state.currentSlideNum);
     }
 
     _onRight() {
-
-        console.log('Right');
 
         if( this.state.currentSlideNum < SLIDES.length ) {
             this.setState({currentSlideNum: this.state.currentSlideNum + 1});
         }
 
-        console.log('this.state.currentSlideNum', this.state.currentSlideNum);
     }
 
 }
