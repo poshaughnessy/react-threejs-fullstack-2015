@@ -16,6 +16,7 @@ var _ = require('lodash'),
 
 /**
  * Based on: https://gist.github.com/wesbos/52b8fe7e972356e85b43
+ * FIXME this doesn't seem to be working...
  */
 function handleBuildErrors() {
     var args = Array.prototype.slice.call(arguments);

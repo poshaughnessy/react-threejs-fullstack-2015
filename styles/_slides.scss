@@ -1,4 +1,19 @@
-/* Slide specific */
+/* Specific to these slides */
+
+.twitter {
+  display: inline-block;
+  padding-left: 35px;
+  background: url(/images/Twitter_bird_logo_2012.svg) no-repeat 0px 4px;
+  background-size: 30px;
+  line-height: 30px;
+
+  a {
+    color: #fff;
+  }
+}
+
+/* Individual slide styles */
+
 .slide {
 
   .title {
@@ -24,16 +39,7 @@
     }
 
     .twitter {
-      display: inline-block;
-      padding-left: 35px;
-      background: url(/images/Twitter_bird_logo_2012.svg) no-repeat 0px 4px;
-      background-size: 30px;
       font-size: 0.9em;
-      line-height: 30px;
-
-      a {
-        color: #fff;
-      }
     }
 
   }
@@ -97,6 +103,19 @@
       font-size: 0.7em;
       padding: 10px;
       color: #666;
+    }
+
+  }
+
+  .thanks {
+
+    .hiring {
+      margin-top: 2em;
+      font-size: 0.9em;
+
+      p {
+        margin: 0 0 0.5em 0;
+      }
     }
 
   }
