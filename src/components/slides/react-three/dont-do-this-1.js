@@ -1,4 +1,5 @@
 import React from 'react';
+import Highlight from 'react-highlight';
 import composeSlide from '../../compose-slide';
 
 class SlideContents extends React.Component {
@@ -8,14 +9,12 @@ class SlideContents extends React.Component {
         return (
             <div className="contents">
                 <h2>First Method</h2>
-                <pre>
-                    <code>
-                        {'componentDidMount: function() {\n' +
-                        '  ...\n' +
-                        '  Scene.init(this);\n' +
-                        '}'}
-                    </code>
-                </pre>
+                <Highlight>
+                        {`componentDidMount: function() {
+    ...
+    Scene.init(this);
+}`}
+                </Highlight>
             </div>
         );
 
