@@ -7,7 +7,7 @@ class SlideContents extends React.Component {
 
         return (
             <div className="contents 3d">
-                <h2>We're moving to a 3D Web</h2>
+                <h2>Say hello to the 3rd dimension</h2>
             </div>
         );
 

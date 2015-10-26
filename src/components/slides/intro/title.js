@@ -13,6 +13,7 @@ class SlideContents extends React.Component {
                 <img src="/images/X-All-The-Y.png" alt="All the things"/>
                 <p>Peter O'Shaughnessy</p>
                 <img className="logo" src="/images/pebblecodelogo.png" alt="pebble {code} logo"/>
+                <p className="twitter"><a href="https://twitter.com/poshaughnessy">@poshaughnessy</a></p>
             </div>
         );
 

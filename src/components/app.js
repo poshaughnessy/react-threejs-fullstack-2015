@@ -4,8 +4,8 @@ import * as slides from './slides/index';
 const SLIDES = [
     slides.Title,
     slides.ThreeDimensions,
-    slides.ApocIntro,
     slides.ChangeMoneyExample,
+    slides.ApocIntro,
     slides.DontDoThis1,
     slides.ReactThreeIntro,
     slides.ReactThreeExample1,
