@@ -89,6 +89,30 @@
     }
   }
 
+  .react-logo {
+    img {
+      width: 50%;
+    }
+    p {
+      color: #00D8FF;
+      font-family: proxima-nova, 'helvetica neue', roboto, arial, sans-serif;
+      margin: 0;
+      font-size: 3em;
+    }
+  }
+
+  .webgl-low-level {
+    img {
+      width: 50%;
+    }
+  }
+
+  .webgl-low-level-code pre {
+    height: 70%;
+    margin-top: 10%;
+    overflow-y: scroll;
+  }
+
   .demo {
 
     height: 100%;

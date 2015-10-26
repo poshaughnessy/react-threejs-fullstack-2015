@@ -6,9 +6,8 @@ class SlideContents extends React.Component {
     render() {
 
         return (
-            <div className="contents react-logo">
-                <img src="/images/react-logo.svg" alt="React logo"/>
-                <p>React</p>
+            <div className="contents webgl-logo">
+                <img src="/images/webgl-logo.svg" alt="WebGL logo"/>
             </div>
         );
 
