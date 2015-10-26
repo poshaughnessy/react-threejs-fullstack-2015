@@ -3,12 +3,13 @@ import * as slides from './slides/index';
 
 const SLIDES = [
     slides.Title,
+    slides.TheProblem1,
     slides.ThreeDimensions,
     slides.ChangeMoneyExample,
     slides.BodyLabsExample,
     slides.WebGLSupport1,
     slides.WebGLSupport2,
-    slides.TheProblem,
+    slides.TheProblem2,
     slides.ApocIntro,
     slides.DontDoThis1,
     slides.ReactThreeIntro,
