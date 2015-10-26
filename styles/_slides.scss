@@ -12,6 +12,12 @@
   }
 }
 
+.top pre {
+  height: 70%;
+  margin-top: 10%;
+  overflow-y: scroll;
+}
+
 /* Individual slide styles */
 
 .slide {
@@ -107,10 +113,22 @@
     }
   }
 
-  .webgl-low-level-code pre {
-    height: 70%;
-    margin-top: 10%;
-    overflow-y: scroll;
+  .threejs-logo {
+    h2 {
+      font-family: 'inconsolata', roboto, arial, sans-serif;
+    }
+    img {
+      width: 70%;
+    }
+  }
+
+  .threejs-spinning-cube-intro {
+    img {
+      width: 45%;
+    }
+    h3 {
+      margin-top: 0;
+    }
   }
 
   .demo {

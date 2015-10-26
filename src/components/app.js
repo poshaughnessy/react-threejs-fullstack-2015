@@ -19,6 +19,10 @@ const SLIDES = [
     slides.WebGLLogo,
     slides.WebGLLowLevel,
     slides.WebGLLowLevelCode,
+    slides.ThreeJSLogo,
+    slides.ThreeJSExample1,
+    slides.ThreeJSExample2,
+    slides.ThreeJSExample3,
     slides.DontDoThis1,
     slides.ReactThreeIntro,
     slides.ReactThreeExample1,
@@ -76,14 +80,10 @@ class AppComponent extends React.Component {
 
         window.location.hash = this.state.currentSlideNum;
 
-        let slideElements = [];
-
-        SLIDES.forEach((slide, index) => {
-            slideElements.push( React.createElement(slide, {key: index, slideNum: index+1, currentSlideNum: this.state.currentSlideNum}) );
-        });
+        let slideElement = React.createElement(SLIDES[this.state.currentSlideNum-1]);
 
         return (
-            React.createElement('div', {}, slideElements)
+            React.createElement('div', {}, slideElement)
         );
 
     }

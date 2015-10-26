@@ -1,21 +1,14 @@
 import React from 'react';
 
+/**
+ * TODO this has ended up being pretty useless now. I could probably ditch it...
+ */
 let composeSlide = (ChildComponent, backgroundColour) => {
 
     class Slide extends React.Component {
 
         constructor() {
             super();
-            this._isVisible = this._isVisible.bind(this);
-        }
-
-
-        _isVisible() {
-            return this.props.currentSlideNum === this.props.slideNum
-        }
-
-        _getSlideClassName() {
-            return 'slide ' + (this._isVisible() ? 'show' : 'hide');
         }
 
         render() {
@@ -27,7 +20,7 @@ let composeSlide = (ChildComponent, backgroundColour) => {
             }
 
             return (
-                <div className={this._getSlideClassName()} style={style}>
+                <div className="slide" style={style}>
                     <ChildComponent/>
                 </div>
             );
@@ -37,8 +30,6 @@ let composeSlide = (ChildComponent, backgroundColour) => {
     }
 
     Slide.propTypes = {
-        currentSlideNum: React.PropTypes.number,
-        slideNum: React.PropTypes.number,
         style: React.PropTypes.object
     };
 
