@@ -25,6 +25,8 @@ const SLIDES = [
     slides.ThreeJSExample3,
     slides.How3,
     slides.FirstApproach,
+    slides.Problem1,
+    slides.Problem2,
     slides.ReactThreeIntro,
     slides.ReactThreeExample1,
     slides.RobotDemo,

@@ -21,6 +21,8 @@ export { default as ThreeJSExample2 } from './threejs/threejs-cube-example-code'
 export { default as ThreeJSExample3 } from './threejs/threejs-cube-example-demo';
 export { default as How3 } from './threejs/how-3';
 export { default as FirstApproach } from './react-three/first-approach';
+export { default as Problem1 } from './react-three/problem-1';
+export { default as Problem2 } from './react-three/problem-2';
 export { default as ReactThreeIntro } from './react-three/react-three-intro';
 export { default as ReactThreeExample1 } from './react-three/react-three-example-1';
 export { default as RobotDemo } from './demo/robot-demo';
