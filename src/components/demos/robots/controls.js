@@ -25,8 +25,8 @@ class ControlsComponent extends React.Component {
                 <RadioGroup name="robot" selectedValue={this.props.robot} ref="robotGroup" onChange={this._onChangeRobot}>
                     {Radio => (
                         <div className="radio-group">
-                            <label><Radio value={Constants.ROBOT.MECH}/>Mech</label>
                             <label><Radio value={Constants.ROBOT.ROBBY} />Robby</label>
+                            <label><Radio value={Constants.ROBOT.MECH}/>Mech</label>
                         </div>
                     )}
                 </RadioGroup>
