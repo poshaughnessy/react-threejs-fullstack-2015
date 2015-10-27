@@ -10,51 +10,48 @@ class SlideContents extends React.Component {
         return (
             <div className="contents top to-do-list-code">
                 <Highlight className="javascript">
-                {`var TodoList = React.createClass({
+                {`class TodoApp extends React.Component {
 
-  render: function() {
-    var createItem = function(itemText, index) {
-      return <li key={index + itemText}>{itemText}</li>;
-    };
-    return <ul>{this.props.items.map(createItem)}</ul>;
-  }
+    constructor() {
+        super();
+        this.state = {items: [], text: ''};
+    }
 
-});
+    render() {
 
+        let items = this.state.items.map(function(itemText, index) {
+            return <li key={index}>{itemText}</li>;
+        });
 
-var TodoApp = React.createClass({
+        return (
+            <div>
+                <h2>Peter's To Do List</h2>
 
-  getInitialState: function() {
-    return {items: [], text: ''};
-  },
+                <ul>{items}</ul>
 
-  onChange: function(e) {
-    this.setState({text: e.target.value});
-  },
+                <form onSubmit={this.handleSubmit.bind(this)}>
+                    <input value={this.state.text}
+                           onChange={this.onInputChange.bind(this)}/>
+                    <button>
+                        {'Add #' + (this.state.items.length + 1)}
+                    </button>
+                </form>
+            </div>
+        );
+    }
 
-  handleSubmit: function(e) {
-    e.preventDefault();
-    var nextItems = this.state.items.concat([this.state.text]);
-    var nextText = '';
-    this.setState({items: nextItems, text: nextText});
-  },
+    onInputChange(e) {
+        this.setState({text: e.target.value});
+    }
 
-  render: function() {
-    return (
-      <div>
-        <h2>Peter's To Do List</h2>
-        <TodoList items={this.state.items} />
-        <form onSubmit={this.handleSubmit}>
-          <input onChange={this.onChange}
-                 value={this.state.text} />
-          <button>
-            {'Add #' + (this.state.items.length + 1)}
-          </button>
-        </form>
-      </div>
-    );
-  }
-});
+    handleSubmit(e) {
+        e.preventDefault();
+        var nextItems = this.state.items.concat([this.state.text]);
+        var nextText = '';
+        this.setState({items: nextItems, text: nextText});
+    }
+
+}
                 `}
                 </Highlight>
             </div>

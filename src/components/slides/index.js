@@ -2,7 +2,7 @@ export { default as Title } from './intro/title';
 export { default as TheProblem1 } from './intro/the-problem-1';
 export { default as ThreeDimensions } from './intro/3d';
 export { default as ChangeMoneyExample } from './intro/example-change-money';
-export { default as BodyLabsExample } from './intro/example-shapex';
+export { default as BodyLabsExample } from './intro/example-bodylabs';
 export { default as TheProblem2 } from './apoc/the-problem-2';
 export { default as ApocIntro } from './apoc/apoc-intro';
 export { default as ReactIntro } from './react/react-intro';
