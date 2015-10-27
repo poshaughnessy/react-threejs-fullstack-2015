@@ -7,7 +7,7 @@ class SlideContents extends React.Component {
 
         return (
             <div className="contents">
-                <h2>React can be useful for all sorts of UIs, not just DOM</h2>
+                <h2>React is not just for the DOM</h2>
             </div>
         );
 
