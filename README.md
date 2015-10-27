@@ -17,6 +17,6 @@ The demos are embedded within the slides.
 
 ## Thanks
 
-Thanks to @Izzimach for the react-three library and for his help.
+Thanks to @Izzimach for the [react-three library](https://github.com/Izzimach/react-three) and for his help.
 
 [Send me a question, or let me know what you think](https://twitter.com/poshaughnessy).
