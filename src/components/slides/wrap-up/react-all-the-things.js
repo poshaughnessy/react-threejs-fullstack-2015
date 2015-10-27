@@ -21,6 +21,4 @@ class SlideContents extends React.Component {
 
 }
 
-console.log('SlideContents', SlideContents);
-
 export default composeSlide(SlideContents);
