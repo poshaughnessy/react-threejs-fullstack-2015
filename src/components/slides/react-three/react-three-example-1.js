@@ -10,13 +10,16 @@ class SlideContents extends React.Component {
             <div className="contents">
                 <Highlight>
                         {`render: function() {
-    ...
+
     return <Scene width={this.props.width}
                   height={this.props.height}
                   camera=\'mainCamera\'>
+
         <PerspectiveCamera name=\'mainCamera\'
                            {...cameraProps}/>
+
         <Robot {...this.props.robotData}/>
+
     </Scene>
 }`}
                 </Highlight>
