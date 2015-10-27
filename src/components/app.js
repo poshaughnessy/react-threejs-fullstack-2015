@@ -31,7 +31,13 @@ const SLIDES = [
     slides.Declarative,
     slides.ReactThreeIntro,
     slides.ReactThreeExample1,
+    slides.ReactThreeExample2,
+    slides.RobotDemoIntro,
     slides.RobotDemo,
+    slides.CodeTime,
+    slides.Recap1,
+    slides.ReactAllTheThings,
+    slides.Recap2,
     slides.Thanks
 ];
 

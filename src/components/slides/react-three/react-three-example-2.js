@@ -10,17 +10,18 @@ class SlideContents extends React.Component {
             <div className="contents">
                 <Highlight className="javascript">
                         {`render: function() {
+    …
 
-    return <Scene width={this.props.width}
-                  height={this.props.height}
-                  camera=\'mainCamera\'>
-
-        <PerspectiveCamera name=\'mainCamera\'
-                           {...cameraProps}/>
-
-        <Robot {...this.props.robotData}/>
-
-    </Scene>
+    return React.createElement(
+        ReactTHREE.Scene,
+        {
+            width: this.props.width,
+            height: this.props.height,
+            camera:'mainCamera'
+        },
+        MainCameraElement,
+        React.createElement(Robot, this.props.robotData)
+   );
 }`}
                 </Highlight>
             </div>

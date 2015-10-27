@@ -27,6 +27,11 @@ export { default as Problem3} from './initial-approach/problem-3';
 export { default as Declarative} from './initial-approach/declarative';
 export { default as ReactThreeIntro } from './react-three/react-three-intro';
 export { default as ReactThreeExample1 } from './react-three/react-three-example-1';
-export { default as RobotDemo } from './demo/robot-demo';
+export { default as ReactThreeExample2 } from './react-three/react-three-example-2';
+export { default as RobotDemoIntro } from './robot-demo/robot-demo-intro';
+export { default as RobotDemo } from './robot-demo/robot-demo';
+export { default as CodeTime } from './wrap-up/code-time';
+export { default as Recap1 } from './wrap-up/recap-1';
+export { default as ReactAllTheThings } from './wrap-up/react-all-the-things';
+export { default as Recap2 } from './wrap-up/recap-2';
 export { default as Thanks } from './wrap-up/thanks';
-

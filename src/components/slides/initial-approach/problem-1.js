@@ -25,7 +25,7 @@ this.dispose = function() {
     this.camera = null;
     this.scene = null;
     this.renderer = null;
-    ...
+    …
 }
 `}
                 </Highlight>
