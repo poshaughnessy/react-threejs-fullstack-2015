@@ -38,7 +38,6 @@ const SLIDES = [
     slides.CodeTime,
     slides.Recap1,
     slides.ReactAllTheThings,
-    slides.Recap2,
     slides.Thanks
 ];
 

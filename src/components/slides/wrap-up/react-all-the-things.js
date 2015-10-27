@@ -7,12 +7,11 @@ class SlideContents extends React.Component {
 
         return (
             <div className="contents">
-                <h2>React All The Things!</h2>
+                <h2>React Even More Things!</h2>
                 <ul>
-                    <li><a href="https://facebook.github.io/react-native/">React Native</a></li>
-                    <li><a href="https://github.com/Flipboard/react-canvas">React Canvas</a></li>
-                    <li><a href="https://github.com/Izzimach/react-pixi">React Pixi</a></li>
-                    <li>...</li>
+                    <li><a href="https://facebook.github.io/react-native/">React Native</a> for mobile apps</li>
+                    <li><a href="https://github.com/Flipboard/react-canvas">React Canvas</a> for HTML5 &lt;canvas&gt;</li>
+                    <li><a href="https://github.com/Izzimach/react-pixi">React Pixi</a> for Pixi.js (2D)</li>
                 </ul>
             </div>
         );

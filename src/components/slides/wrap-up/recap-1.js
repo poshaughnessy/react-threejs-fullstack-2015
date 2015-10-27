@@ -7,7 +7,13 @@ class SlideContents extends React.Component {
 
         return (
             <div className="contents">
-                <h2>React is not just for the DOM</h2>
+                <h2>Summary</h2>
+                <ul>
+                    <li>We're increasingly combining 2D &amp; 3D</li>
+                    <li>React is great for UIs</li>
+                    <li>Three.js is great for 3D scenes</li>
+                    <li>Combine the two yourself, or use <a href="https://github.com/Izzimach/react-three">react-three</a></li>
+                </ul>
             </div>
         );
 
