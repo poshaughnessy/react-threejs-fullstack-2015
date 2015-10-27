@@ -31,7 +31,8 @@ const SLIDES = [
     slides.Problem1,
     slides.Problem2,
     slides.Problem3,
-    slides.Declarative,
+    slides.CombineTwoBetter,
+
     slides.ReactThreeIntro,
     slides.ReactThreeExample1,
     slides.ReactThreeExample2,

@@ -217,19 +217,30 @@
     }
   }
 
+  .all-the-things {
+    img {
+      display: block;
+      margin: 0 auto 0 auto;
+    }
+  }
+
   .thanks {
 
+    canvas {
+      position: static;
+    }
+
+    .github {
+      margin: 0.5em 0 0 0;
+    }
+
     .hiring {
-      margin-top: 2em;
+      margin-top: 1em;
       font-size: 0.9em;
 
       p {
         margin: 0 0 0.5em 0;
       }
-    }
-
-    .github {
-      margin: 2em 0 0 0;
     }
 
   }

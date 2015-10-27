@@ -24,7 +24,7 @@ export { default as FirstApproach } from './initial-approach/first-approach';
 export { default as Problem1 } from './initial-approach/problem-1';
 export { default as Problem2 } from './initial-approach/problem-2';
 export { default as Problem3} from './initial-approach/problem-3';
-export { default as Declarative} from './initial-approach/declarative';
+export { default as CombineTwoBetter} from './initial-approach/can-we-combine-two-better';
 export { default as ReactThreeIntro } from './react-three/react-three-intro';
 export { default as ReactThreeExample1 } from './react-three/react-three-example-1';
 export { default as ReactThreeExample2 } from './react-three/react-three-example-2';
