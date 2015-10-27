@@ -19,7 +19,7 @@ var scene = new THREE.Scene();
 
 // 3. And a camera
 var camera = new THREE.PerspectiveCamera( 45, width/height,
-1, 1000 );
+    1, 1000 );
 scene.add( camera );
 
 // 4. Load a texture
