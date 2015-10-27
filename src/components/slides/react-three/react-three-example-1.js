@@ -18,7 +18,7 @@ class SlideContents extends React.Component {
         <PerspectiveCamera name=\'mainCamera\'
                            {...cameraProps}/>
 
-        <Robot {...this.props.robotData}/>
+        <Cube {...this.props.cubeData}/>
 
     </Scene>
 }`}

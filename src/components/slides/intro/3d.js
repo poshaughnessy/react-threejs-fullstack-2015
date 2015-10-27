@@ -7,8 +7,7 @@ class SlideContents extends React.Component {
 
         return (
             <div className="contents three-d">
-                <h2>Hello, 3rd dimension!</h2>
-                <img src="/images/apoc-wireframe.png" alt="Design for Project Apoc"/>
+                <h1>Can't we do better?</h1>
             </div>
         );
 

@@ -7,7 +7,7 @@ class SlideContents extends React.Component {
 
         return (
             <div className="contents">
-                <h2>Robot Demo Time</h2>
+                <h1>Robot Demo Time</h1>
             </div>
         );
 

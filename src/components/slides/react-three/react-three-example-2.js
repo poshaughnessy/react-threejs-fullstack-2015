@@ -20,7 +20,7 @@ class SlideContents extends React.Component {
             camera:'mainCamera'
         },
         MainCameraElement,
-        React.createElement(Robot, this.props.robotData)
+        React.createElement(Cube, this.props.cubeData)
    );
 }`}
                 </Highlight>

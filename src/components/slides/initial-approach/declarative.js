@@ -8,7 +8,11 @@ class SlideContents extends React.Component {
 
         return (
             <div className="contents declarative">
-                <h2>How about we use the same declarative style as React?</h2>
+                <h2>Can we combine the two in a better way?</h2>
+                <ul>
+                    <li>Declarative 3D scene</li>
+                    <li>Driven by React state/props</li>
+                </ul>
             </div>
         );
 
