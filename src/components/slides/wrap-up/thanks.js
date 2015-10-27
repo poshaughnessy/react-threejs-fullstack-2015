@@ -228,10 +228,10 @@ class ThanksSlideContents extends React.Component {
                 <h1>Thanks!</h1>
                 <div ref="robotContainer"></div>
                 <div>
-                    <p className="github"><a href="https://github.com/poshaughnessy">github.com/poshaughnessy</a></p>
+                    <p className="twitter"><a href="https://twitter.com/poshaughnessy">@poshaughnessy</a></p>
                 </div>
                 <div>
-                    <p className="twitter"><a href="https://twitter.com/poshaughnessy">@poshaughnessy</a></p>
+                    <p className="github"><a href="https://github.com/poshaughnessy">github.com/poshaughnessy</a></p>
                 </div>
                 <div className="hiring">
                     <p><em>We're hiring full-stack JS developers!</em></p>
