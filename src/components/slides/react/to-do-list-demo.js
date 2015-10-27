@@ -25,7 +25,7 @@ let TodoApp = React.createClass({
     render: function() {
         return (
             <div>
-                <h3>Peter's To Do List</h3>
+                <h2>Peter's To Do List</h2>
                 <TodoList items={this.state.items} />
                 <form onSubmit={this.handleSubmit}>
                     <input onChange={this.onChange} value={this.state.text} />

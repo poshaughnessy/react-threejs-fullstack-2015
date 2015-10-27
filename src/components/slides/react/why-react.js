@@ -10,7 +10,7 @@ class SlideContents extends React.Component {
                 <h2>Why React?</h2>
                 <ul>
                     <li>Simpler, declarative code</li>
-                    <li>Components encourages modular code</li>
+                    <li>Components encourage modular code</li>
                     <li>Fast UIs by default (Virtual DOM)</li>
                 </ul>
             </div>
