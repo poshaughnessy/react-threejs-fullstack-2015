@@ -1,6 +1,6 @@
 # React and ThreeJS: React All The Things!
 
-My presentation for FullStack 2015, 26th October 2015.
+My presentation for [FullStack 2015](https://twitter.com/hashtag/fullstackcon), 26th October 2015.
 
 It's about the rise of the 3D Web, and how we can mix these two great libraries
 together to build web applications that combine 2D and 3D elements.
