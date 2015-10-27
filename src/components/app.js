@@ -15,6 +15,7 @@ const SLIDES = [
     slides.ReactLogo,
     slides.WhyReact,
     slides.ReactExample1,
+    slides.ReactExample2,
     slides.How2,
     slides.WebGLLogo,
     slides.WebGLLowLevel,

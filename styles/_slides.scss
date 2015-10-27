@@ -121,6 +121,24 @@
     }
   }
 
+  .to-do-list-example {
+    input {
+      padding: 5px;
+      height: 60px;
+      box-sizing: border-box;
+      font-size: 1.5em;
+    }
+    button {
+      border: 0;
+      background-color: #eee;
+      padding: 5px;
+      height: 60px;
+      box-sizing: border-box;
+      font-size: 1.5em;
+      margin-left: 10px;
+    }
+  }
+
   .webgl-low-level {
     img {
       width: 50%;

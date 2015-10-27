@@ -11,6 +11,7 @@ export { default as How1 } from './apoc/how-1';
 export { default as ReactLogo } from './react/react-logo';
 export { default as WhyReact } from './react/why-react';
 export { default as ReactExample1 } from './react/react-example-1';
+export { default as ReactExample2 } from './react/react-example-2';
 export { default as How2 } from './webgl/how-2';
 export { default as WebGLLogo } from './webgl/webgl-logo';
 export { default as WebGLLowLevel } from './webgl/webgl-low-level';
