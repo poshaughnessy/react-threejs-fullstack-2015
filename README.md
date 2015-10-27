@@ -19,4 +19,4 @@ The demos are embedded within the slides.
 
 Thanks to @Izzimach for the react-three library and for his help.
 
-(Send me a question, or let me know what you think)[https://twitter.com/poshaughnessy].
+[Send me a question, or let me know what you think](https://twitter.com/poshaughnessy).
