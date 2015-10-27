@@ -30,6 +30,7 @@ class SlideContents extends React.Component {
             <div className="contents demo">
                 <ControlsComponent robot={this.state.robot} spinDirection={this.state.spinDirection} spinSpeed={this.state.spinSpeed} onChangeRobot={this._onChangeRobot} onChangeSpinDirection={this._onChangeSpinDirection} onChangeSpinSpeed={this._onChangeSpinSpeed}/>
                 <SceneComponent robot={this.state.robot} spinDirection={this.state.spinDirection} spinSpeed={this.state.spinSpeed}/>
+                <div className="credits">Robby The Robot by <a href="http://www.blendswap.com/user/planemo">Planemo</a>, Mech Robot by <a href="http://www.blendswap.com/user/mirov777">mirov777</a></div>
             </div>
         );
 

@@ -5,7 +5,7 @@ import Constants from '../../../constants';
 import RobotRobbyComponent from './models/robotRobby';
 import RobotMechComponent from './models/robotMech';
 
-const ROBOT_ROBBY_Y = -25,
+const ROBOT_ROBBY_Y = -28,
       ROBOT_MECH_Y = 0;
 
 class SceneComponent extends React.Component {
