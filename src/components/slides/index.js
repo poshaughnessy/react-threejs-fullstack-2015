@@ -33,4 +33,5 @@ export { default as RobotDemo } from './robot-demo/robot-demo';
 export { default as CodeTime } from './wrap-up/code-time';
 export { default as Recap1 } from './wrap-up/recap-1';
 export { default as ReactAllTheThings } from './wrap-up/react-all-the-things';
+export { default as FinalThought } from './wrap-up/final-thought';
 export { default as Thanks } from './wrap-up/thanks';

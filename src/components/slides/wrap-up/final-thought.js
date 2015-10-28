@@ -6,9 +6,8 @@ class SlideContents extends React.Component {
     render() {
 
         return (
-            <div className="contents react-intro">
-                <h2>What about the rest of the UI?</h2>
-                <img src="/images/apoc.png" alt="Project Apoc"/>
+            <div className="contents final-thought">
+                <h1>Let's build better user interfaces</h1>
             </div>
         );
 

@@ -41,6 +41,7 @@ const SLIDES = [
     slides.CodeTime,
     slides.Recap1,
     slides.ReactAllTheThings,
+    slides.FinalThought,
     slides.Thanks
 ];
 
