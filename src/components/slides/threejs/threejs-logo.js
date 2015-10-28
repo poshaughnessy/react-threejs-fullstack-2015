@@ -9,6 +9,7 @@ class SlideContents extends React.Component {
             <div className="contents threejs-logo">
                 <h2>three.js</h2>
                 <img src="/images/threejs-org.png" alt="ThreeJS examples"/>
+                <p class="caption"><a href="http://threejs.org/">threejs.org</a></p>
             </div>
         );
 
